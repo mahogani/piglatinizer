@@ -1,19 +1,23 @@
 $("document").ready(function() {
 
     $("#button").click(function() {
-
+    debugger;
         let word = $(".input").val();
-        if (letter == "a" || letter == "e" || letter == "i" || letter == "o" || letter == "u") {
-        return word + "ay"
-            }
+        let letter = word.charAt(0);
+        if (letter === "a" || letter === "e" || letter === "i" || letter === "o" || letter === "u") {
+            word= word + "ay";
+        }
 
         else {
             let first_letter = word.slice(0,1);
-            return word + first_letter +"ay"
-            }
+             word= word + first_letter +"ay";
+             console.log(word);
+        }
 
-    $(".output").text(word);
+        $(".output").text(word.slice(1));
 
      });
+
+
 });
 
